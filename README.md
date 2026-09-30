@@ -1,32 +1,112 @@
-# React + TypeScript + Vite
+# 🎬 Movie Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern movie discovery web application built with React, TypeScript, Tailwind CSS, and the TMDB API.
 
-Currently, two official plugins are available:
+Movie Explorer allows users to discover popular movies, browse movie information, search for movies, view detailed information, and save their favorite movies.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Coming soon.
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## 📸 Preview
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+Coming soon.
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+---
+
+## ✨ Features
+
+### Current Features
+
+- 🎬 Browse popular movies
+- ⭐ Display movie ratings
+- 📅 Display movie release dates
+- 🖼️ Display movie posters
+- 🔄 Loading states
+- ❌ Error handling
+- 📭 Empty states
+- 🧩 Reusable MovieCard component
+- 🧭 Client-side routing
+- 📱 Responsive movie browsing interface
+
+### Planned Features
+
+- 🔎 Movie search
+- 🎞️ Movie details page
+- ❤️ Favorites
+- 💾 Persistent favorites using localStorage
+- 🎯 Top Rated movies
+- 🍿 Now Playing movies
+- 📄 Pagination / infinite scrolling
+- 🎭 Movie genres
+- 🎥 Trailers
+- 👥 Cast information
+- 🌙 Dark mode improvements
+- 🚀 Production deployment
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- React
+- TypeScript
+- Tailwind CSS
+- React Router
+
+### Data & API
+
+- Axios
+- TMDB API
+
+### Development
+
+- Vite
+- ESLint
+- Git
+- GitHub
+
+---
+
+## 📁 Project Structure
+
+```text
+src/
+│
+├── assets/
+│
+├── components/
+│   ├── EmptyState.tsx
+│   ├── ErrorMessage.tsx
+│   ├── Loading.tsx
+│   ├── MovieCard.tsx
+│   └── Navbar.tsx
+│
+├── hooks/
+│
+├── layouts/
+│
+├── pages/
+│   ├── Favorites.tsx
+│   ├── Home.tsx
+│   ├── MovieDetails.tsx
+│   ├── Movies.tsx
+│   └── Search.tsx
+│
+├── services/
+│   ├── api.ts
+│   └── movieService.ts
+│
+├── types/
+│   └── movie.ts
+│
+├── utils/
+│
+├── App.tsx
+├── index.css
+└── main.tsx
