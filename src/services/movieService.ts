@@ -27,6 +27,17 @@ export const getMovieDetails = async (
   id: string
 ): Promise<Movie> => {
   const response = await api.get<Movie>(`/movie/${id}`);
+  return response.data;
+};
+
+export const searchMovies = async (
+  query: string
+): Promise<MovieResponse> => {
+  const response = await api.get<MovieResponse>("/search/movie", {
+    params: {
+      query,
+    },
+  });
 
   return response.data;
 };
