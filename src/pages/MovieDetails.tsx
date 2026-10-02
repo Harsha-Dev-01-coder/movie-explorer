@@ -7,6 +7,7 @@ import ErrorMessage from "../components/ErrorMessage";
 import { getMovieById } from "../services/movieService";
 import type { MovieDetails as MovieDetailsType } from "../types/movie";
 
+import { formatRuntime } from "../utils/format";
 import FavoriteButton from "../components/FavoriteButton";
 
 function MovieDetails() {
@@ -133,11 +134,9 @@ function MovieDetails() {
                 {movie.release_date || "Release date unavailable"}
               </span>
 
-              {movie.runtime !== null && (
-                <span>
-                  {movie.runtime} min
-                </span>
-              )}
+              <span>
+                {formatRuntime(movie.runtime)}
+              </span>
             </div>
 
             {/* Genres */}
