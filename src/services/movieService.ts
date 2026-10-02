@@ -1,5 +1,5 @@
 import api from "./api";
-import type { Movie } from "../types/movie";
+import type { Movie, MovieDetails } from "../types/movie";
 
 interface MovieResponse {
   page: number;
@@ -23,10 +23,10 @@ export const getNowPlayingMovies = async (): Promise<MovieResponse> => {
   return response.data;
 };
 
-export const getMovieDetails = async (
+export const getMovieById = async (
   id: string
-): Promise<Movie> => {
-  const response = await api.get<Movie>(`/movie/${id}`);
+): Promise<MovieDetails> => {
+  const response = await api.get<MovieDetails>(`/movie/${id}`);
   return response.data;
 };
 

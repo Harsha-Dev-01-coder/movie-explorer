@@ -8,3 +8,14 @@ export const getPosterUrl = (
 
   return `https://image.tmdb.org/t/p/${size}${posterPath}`;
 };
+
+export const getBackdropUrl = (
+  backdropPath: string | null,
+  size: string = "original"
+): string => {
+  if (!backdropPath) {
+    return "";
+  }
+
+  return `https://image.tmdb.org/t/p/${size}${backdropPath}`;
+};

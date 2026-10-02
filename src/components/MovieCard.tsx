@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
-import type { Movie } from "../types/movie";
+
+import FavoriteButton from "./FavoriteButton";
+
+import type {
+  FavoriteMovie,
+  Movie,
+} from "../types/movie";
 
 interface MovieCardProps {
-  movie: Movie;
+  movie: Movie | FavoriteMovie;
 }
 
 function MovieCard({ movie }: MovieCardProps) {
@@ -11,7 +17,10 @@ function MovieCard({ movie }: MovieCardProps) {
     : "N/A";
 
   return (
-    <Link to={`/movies/${movie.id}`} className="group block">
+    <Link
+      to={`/movies/${movie.id}`}
+      className="group block"
+    >
       <article className="overflow-hidden rounded-lg bg-zinc-900 transition-transform duration-300 group-hover:-translate-y-1">
         <div className="aspect-[2/3] overflow-hidden bg-zinc-800">
           <img
@@ -39,6 +48,16 @@ function MovieCard({ movie }: MovieCardProps) {
               {releaseYear}
             </span>
           </div>
+
+          <FavoriteButton
+            movie={{
+              id: movie.id,
+              title: movie.title,
+              poster_path: movie.poster_path,
+              vote_average: movie.vote_average,
+              release_date: movie.release_date,
+            }}
+          />
         </div>
       </article>
     </Link>

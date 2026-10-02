@@ -1,8 +1,8 @@
 # 🎬 Movie Explorer
 
-A modern movie discovery web application built with React, TypeScript, Tailwind CSS, and the TMDB API.
+A modern movie discovery web application built with React, TypeScript, Tailwind CSS, React Router, Axios, and the TMDB API.
 
-Movie Explorer allows users to discover popular movies, browse movie information, search for movies, view detailed information, and save their favorite movies.
+Movie Explorer allows users to discover movies, search for movies, browse different movie categories, view movie information, and save their favorite movies.
 
 ---
 
@@ -23,29 +23,36 @@ Coming soon.
 ### Current Features
 
 - 🎬 Browse popular movies
-- ⭐ Display movie ratings
-- 📅 Display movie release dates
-- 🖼️ Display movie posters
+- ⭐ Browse top-rated movies
+- 🍿 Browse now-playing movies
+- 🔎 Search for movies
+- 🔗 Search state synchronized with URL query parameters
+- 🖼️ Movie posters
+- ⭐ Movie ratings
+- 📅 Movie release years
+- 🎞️ Responsive movie grid
+- 📱 Responsive UI
+- 🧩 Reusable MovieCard component
+- 🧩 Reusable MovieGrid component
 - 🔄 Loading states
 - ❌ Error handling
 - 📭 Empty states
-- 🧩 Reusable MovieCard component
+- 🖼️ Fallback handling for missing movie posters
 - 🧭 Client-side routing
-- 📱 Responsive movie browsing interface
+- 🔗 Navigation to movie details
+- 🏗️ Separated API/service architecture
+- 🔷 TypeScript API types
 
 ### Planned Features
 
-- 🔎 Movie search
 - 🎞️ Movie details page
 - ❤️ Favorites
 - 💾 Persistent favorites using localStorage
-- 🎯 Top Rated movies
-- 🍿 Now Playing movies
-- 📄 Pagination / infinite scrolling
 - 🎭 Movie genres
-- 🎥 Trailers
+- 🎥 Movie trailers
 - 👥 Cast information
-- 🌙 Dark mode improvements
+- 📄 Pagination / infinite scrolling
+- 🌙 Dark mode
 - 🚀 Production deployment
 
 ---
@@ -59,10 +66,11 @@ Coming soon.
 - Tailwind CSS
 - React Router
 
-### Data & API
+### API & Data
 
 - Axios
 - TMDB API
+- REST API
 
 ### Development
 
@@ -85,6 +93,7 @@ src/
 │   ├── ErrorMessage.tsx
 │   ├── Loading.tsx
 │   ├── MovieCard.tsx
+│   ├── MovieGrid.tsx
 │   └── Navbar.tsx
 │
 ├── hooks/
@@ -106,6 +115,7 @@ src/
 │   └── movie.ts
 │
 ├── utils/
+│   └── image.ts
 │
 ├── App.tsx
 ├── index.css
