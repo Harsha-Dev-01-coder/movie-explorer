@@ -26,7 +26,6 @@ Movie Explorer allows users to discover movies, search for specific titles, view
 
 ![Favorites](./screenshots/favorites.png)
 
-> Screenshots will be added before deployment.
 
 ---
 
