@@ -9,7 +9,7 @@ import Favorites from "./pages/Favorites";
 
 function App() {
   return (
-    <BrowserRouter basename="/movie-explorer">
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Navbar />
 
       <Routes>
