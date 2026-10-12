@@ -6,7 +6,7 @@ Movie Explorer allows users to discover movies, search for specific titles, view
 
 ## 🚀 Live Demo
 
-🔗 **Live Demo:https://harsha-dev-01-coder.github.io/movie-explorer/
+🔗 **Live Demo:https://movie-explorer-cyan-iota.vercel.app/
 
 ## 📸 Screenshots
 
